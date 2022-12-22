@@ -13,7 +13,6 @@ int MyCallBackLib(int num1, int num2) {
 }
 
 int main() {
-    char buf[1]{ 0 };
 
     // 常规调用 Shared DLL 函数
     cout << sharedAdd(13000, 520) << endl;
@@ -33,5 +32,6 @@ int main() {
     cout << staticAddCallBack(MyCallBackLib, 13000, 520) << endl;
 
     cout << "请输入任意字符串退出程序" << endl;
+    char buf[1]{ 0 };
     cin.read(buf, sizeof(buf));
 }
